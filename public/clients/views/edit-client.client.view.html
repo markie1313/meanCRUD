@@ -1,0 +1,80 @@
+<section data-ng-controller="ClientsController" data-ng-init="findOne()">
+	<h1>Edit Client</h1>
+	<form data-ng-submit="update()" novalidate>
+		<div>
+			<label for="clientname">Name</label>
+			<div>
+				<input type="text" data-ng-model="client.clientname" id="clientname" placeholder="Client Name" required>
+			</div>
+		</div>
+		<div>
+			<label for="clienturl">URL</label>
+			<div>
+				<input type="text" data-ng-model="client.clienturl" id="clienturl" placeholder="Client URL" required>
+			</div>
+		</div>
+		<div>
+			<label for="internalip">Internal IP</label>
+			<div>
+				<input type="text" data-ng-model="client.internalip" id="internalip" placeholder="Internal IP" required>
+			</div>
+		</div>
+		<div>
+			<label for="dbase">DB</label>
+			<div>
+				<input type="text" data-ng-model="client.dbase" id="dbase" placeholder="DB" required>
+			</div>
+		</div>
+		<div>
+			<label for="dbname">DB Name</label>
+			<div>
+				<input type="text" data-ng-model="client.dbname" id="dbname" placeholder="DB Name" required>
+			</div>
+		</div>
+		<div>
+			<label for="webserver">Web Server</label>
+			<div>
+				<input type="text" data-ng-model="client.webserver" id="webserver" placeholder="Web Server" required>
+			</div>
+		</div>
+		<div>
+			<label for="externalIP">External IP</label>
+			<div>
+				<input type="text" data-ng-model="client.externalIP" id="externalIP" placeholder="External IP" required>
+			</div>
+		</div>
+		<div>
+			<label for="sqlIP">SQL IP</label>
+			<div>
+				<input type="text" data-ng-model="client.sqlIP" id="sqlIP" placeholder="SQL IP" required>
+			</div>
+		</div>
+		<div>
+			<label for="hasSSL">SSL?</label>
+			<div>
+				<input type="radio" data-ng-model="client.hasSSL" id="hasSSLYes" value="Yes">
+				<input type="radio" data-ng-model="client.hasSSL" id="hasSSLNo" value="No">
+			</div>
+		</div>
+		<div>
+			<label for="hasPreferred">Has Preferred?</label>
+			<div>
+				<input type="radio" data-ng-model="client.hasPreferred" id="hasPreferredYes" value="Yes">
+				<input type="radio" data-ng-model="client.hasPreferred" id="hasPreferredNo" value="No">
+			</div>
+		</div>
+		<div>
+			<label for="isParty">Is Party Plan?</label>
+			<div>
+				<input type="radio" data-ng-model="client.isParty" id="isPartyYes" value="Yes">
+				<input type="radio" data-ng-model="client.isParty" id="isPartyNo" value="No">
+			</div>
+		</div>
+		<div>
+			<input type="submit" value="Update">
+		</div>
+		<div data-ng-show="error">
+			<strong data-ng-bind="error"></strong>
+		</div>
+	</form>
+</section>

@@ -1,0 +1,16 @@
+<section data-ng-controller="ClientsController" data-ng-init="find()">
+	<h1>Clients</h1>
+	<ul>
+		<li data-ng-repeat="client in clients">
+			<a data-ng-href="#!/clients/{{client._id}}" data-ng-bind="client.clientname"></a>
+			<br>
+			<small data-ng-bind="article.created | date: 'medium'"></small>
+			<small>/</small>
+			<small data-ng-bind="article.creator.fullName"></small>
+			<p data-ng-bind="article.content"></p>
+		</li>
+	</ul>
+	<div data-ng-hide="!clients || client.length">
+		No clients yet, why don't you <a href="/#!/clients/create">add one</a>?
+	</div>
+</section>

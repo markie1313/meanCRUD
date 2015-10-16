@@ -1,0 +1,87 @@
+<section data-ng-controller="ClientsController">
+<h1>New Client</h1>
+	<form data-ng-submit="create()" novalidate>
+		<div>
+            <label for="clientname">Name</label>
+			<div>
+            <input type="text" placeholder="clientname" data-ng-model="clientname">
+            </div>
+		</div>
+		<div>
+            <label for="clienturl">URL</label> 
+			<div>
+            <input type="text" placeholder="clienturl" data-ng-model="clienturl">
+            </div>
+		</div>
+		<div>
+            <label for="internalip">Internal IP</label> 
+			<div>
+            <input type="text" placeholder="internalip" data-ng-model="internalip">
+            </div>
+		</div>
+		<div>
+            <label for="dbase">Database</label> 
+			<div>
+            <input type="text" placeholder="dbase" data-ng-model="dbase">
+            </div>
+		</div>
+		<div>
+            <label for="dbname">Database Name</label>
+			<div>
+            <input type="text" placeholder="dbname" data-ng-model="dbname">
+            </div>
+		</div>
+		<div>
+            <label for="webserver">Web Server</label>
+			<div>
+            <input type="text" placeholder="webserver" data-ng-model="webserver">
+            </div>
+		</div>
+		<div>
+            <label for="externalIP">External IP</label>
+			<div>
+            <input type="text" placeholder="externalIP" data-ng-model="externalIP">
+            </div>
+		</div>
+		<div>
+            <label for="sqlIP">SQL IP</label>
+			<div>
+            <input type="text" placeholder="sqlIP" data-ng-model="sqlIP">
+            </div>
+		</div>
+		<div>
+            <label for="hasSSL">SSL?</label>
+			<div>
+            <select placeholder="hasSSL" data-ng-model="hasSSL">
+                <option value="0">No</option>
+                <option value="-1">Yes</option>
+            </select>
+            </div>
+		</div>
+		<div>
+            <label for="hasPreferred">Has Preferred?</label>
+			<div>
+            <select placeholder="hasPreferred" data-ng-model="hasPreferred">
+                <option value="0">No</option>
+                <option value="-1">Yes</option>
+            </select>
+            </div>
+		</div>
+		<div>
+            <label for="isParty">Is Party?</label>
+			<div>
+            <select placeholder="isParty" data-ng-model="isParty">
+                <option value="0">No</option>
+                <option value="-1">Yes</option>
+            </select>
+            </div>
+		</div>
+		<div>
+			<input type="submit">
+		</div>
+		<div data-ng-show="error">
+			<strong data-ng-bind="error"></strong>
+		</div>
+	</form>
+</section>
+
