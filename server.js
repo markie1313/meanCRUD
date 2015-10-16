@@ -10,6 +10,6 @@ var passport = passport();
 
 app.listen(3000);
 
-console.log("Server is funning");
+console.log("Server is funning. Yeah...");
 
 module.exports = app;
