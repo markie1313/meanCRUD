@@ -3,14 +3,19 @@
 	<ul>
 		<li data-ng-repeat="client in clients">
 			<a data-ng-href="#!/clients/{{client._id}}" data-ng-bind="client.clientname"></a>
-			<br>
-			<small data-ng-bind="article.created | date: 'medium'"></small>
-			<small>/</small>
-			<small data-ng-bind="article.creator.fullName"></small>
-			<p data-ng-bind="article.content"></p>
+			<small data-ng-bind="client.internalip"></small>
+			<small data-ng-bind="client.externalIP"></small>
+			<small data-ng-bind="client.dbase"></small>
+			<small data-ng-bind="client.dbname"></small>
+			<small data-ng-bind="client.webserver"></small>
+			<small data-ng-bind="client.sqlIP"></small>
+			<small data-ng-bind="client.hasSSL"></small>
+			<small data-ng-bind="client.hasPreferred"></small>
+			<small data-ng-bind="client.isParty"></small>
+			<p data-ng-bind="client.clienturl"></p>
 		</li>
 	</ul>
-	<div data-ng-hide="!clients || client.length">
+	<div data-ng-hide="!client || client.length">
 		No clients yet, why don't you <a href="/#!/clients/create">add one</a>?
 	</div>
 </section>

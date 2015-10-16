@@ -1,5 +1,5 @@
 var users = require('../../app/controllers/users.server.controller'),
-	client = require('../../app/controllers/clients.server.controller');
+	clients = require('../../app/controllers/clients.server.controller');
 	
 module.exports = function (app) {
 	app.route('/api/clients')

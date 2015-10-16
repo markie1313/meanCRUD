@@ -6,6 +6,7 @@ var config = require('./config'),
 		
 		require('../app/models/user.server.model');
 		require('../app/models/article.server.model');
+		require('../app/models/client.server.model');
 		
 		return db;
 	};
