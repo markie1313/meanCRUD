@@ -3,8 +3,17 @@ angular.module('clients').controller('ClientsController', ['$scope', '$routePara
 				
 				$scope.create = function () {
 					var client = new Clients({
-						title: this.title,
-						content: this.content
+						clientname: this.clientname,
+						clienturl: this.clienturl,
+						internalip: this.internalip,
+						dbase: this.dbase,
+						dbname: this.dbname,
+						webserver: this.webserver,
+						externalIP: this.externalIP,
+						sqlIP: this.sqlIP,
+						hasSSL: this.hasSSL,
+						hasPreferred: this.hasPreferred,
+						isParty: this.isParty
 					});
 					
 					client.$save(function (response) {
