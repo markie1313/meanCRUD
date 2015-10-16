@@ -3,7 +3,7 @@
 
 // Set the 'development' environment configuration object
 module.exports = {
-	db: 'mongodb://localhost/meancrud',
+	db: 'mongodb://localhost/support',
 	sessionSecret: 'developmentSessionSecret',
 	facebook: {
 		clientID: '492481720796244',
